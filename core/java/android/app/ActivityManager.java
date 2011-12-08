@@ -524,6 +524,7 @@ public class ActivityManager {
      * Used by persistent processes to determine if they are running on a
      * higher-end device so should be okay using hardware drawing acceleration
      * (which tends to consume a lot more RAM).
+     * Alternatively, setting debug.egl.hw=0 disables hardware acceleration.
      * @hide
      */
     static public boolean isHighEndGfx() {
@@ -536,6 +537,9 @@ public class ActivityManager {
      * @hide
      */
     public static boolean isForcedHighEndGfx() {
+        if ("0".equals(SystemProperties.get("debug.egl.hw"))) {
+            return false;
+        }
         return SystemProperties.getBoolean("persist.sys.force_highendgfx", false);
     }
 
