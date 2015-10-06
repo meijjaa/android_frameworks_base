@@ -332,7 +332,7 @@ public final class DisplayManagerService extends SystemService {
                 synchronized (mSyncRoot) {
                     if (mGlobalDisplayState != state) {
                         mGlobalDisplayState = state;
-                        updateGlobalDisplayStateLocked(mTempDisplayStateWorkQueue);
+//                      updateGlobalDisplayStateLocked(mTempDisplayStateWorkQueue);
                         scheduleTraversalLocked(false);
                     }
                 }
