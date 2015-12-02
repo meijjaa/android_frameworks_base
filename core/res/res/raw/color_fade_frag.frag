@@ -6,7 +6,7 @@ uniform float opacity;
 uniform float saturation;
 uniform float gamma;
 varying vec2 UV;
-
+/*
 vec3 rgb2hsl(vec3 rgb)
 {
     float e = 1.0e-7;
@@ -21,7 +21,7 @@ vec3 rgb2hsl(vec3 rgb)
     float s = c / (1.0 - abs(2.0 * l - 1.0) + e);
     return clamp(vec3(h, s, l), 0.0, 1.0);
 }
-
+*/
 vec3 hsl2rgb(vec3 hsl)
 {
     vec3 h = vec3(hsl.x * 6.0);
@@ -35,8 +35,10 @@ vec3 hsl2rgb(vec3 hsl)
 
 void main()
 {
+    /*
     vec4 color = texture2D(texUnit, UV);
     vec3 hsl = rgb2hsl(color.xyz);
     vec3 rgb = pow(hsl2rgb(vec3(hsl.x, hsl.y * saturation, hsl.z * opacity)), vec3(gamma));
-    gl_FragColor = vec4(rgb, 1.0);
+    */
+    gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 }
