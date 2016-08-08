@@ -453,7 +453,7 @@ void RenderProxy::resetProfileInfo() {
 CREATE_BRIDGE2(dumpGraphicsMemory, int fd, RenderThread* thread) {
     args->thread->jankTracker().dump(args->fd);
 
-    FILE *file = fdopen(args->fd, "a");
+    FILE *file = fdopen(dup(args->fd), "a");
     if (Caches::hasInstance()) {
         String8 cachesLog;
         Caches::getInstance().dumpMemoryUsage(cachesLog);
@@ -462,6 +462,7 @@ CREATE_BRIDGE2(dumpGraphicsMemory, int fd, RenderThread* thread) {
         fprintf(file, "\nNo caches instance.\n");
     }
     fflush(file);
+    fclose(file);
     return nullptr;
 }
 
