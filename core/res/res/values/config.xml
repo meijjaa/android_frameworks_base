@@ -1583,7 +1583,7 @@
 
          Note: Disable SMS also disable voicemail waiting sms,
                cell broadcasting sms, and MMS. -->
-    <bool name="config_sms_capable">true</bool>
+    <bool name="config_sms_capable">false</bool>
 
     <!-- Default SMS Application. This will be the default SMS application when
          the phone first boots. The user can then change the default app to one
@@ -2233,7 +2233,7 @@
     <!-- Flag indicating that this device does not rotate and will always remain in its default
          orientation. Activities that desire to run in a non-compatible orientation will be run
          from an emulated display within the physical display. -->
-    <bool name="config_forceDefaultOrientation">false</bool>
+    <bool name="config_forceDefaultOrientation">true</bool>
 
     <!-- Default Gravity setting for the system Toast view. Equivalent to: Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM -->
     <integer name="config_toastDefaultGravity">0x00000051</integer>

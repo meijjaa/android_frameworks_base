@@ -28,7 +28,7 @@
     <string name="def_bluetooth_disabled_profiles" translatable="false">0</string>
     <bool name="def_auto_time">true</bool>
     <bool name="def_auto_time_zone">true</bool>
-    <bool name="def_accelerometer_rotation">true</bool>
+    <bool name="def_accelerometer_rotation">false</bool>
     <!-- Default screen brightness, from 0 to 255.  102 is 40%. -->
     <integer name="def_screen_brightness">102</integer>
     <bool name="def_screen_brightness_automatic_mode">false</bool>
@@ -82,8 +82,8 @@
     <string name="def_trusted_sound" translatable="false">/system/media/audio/ui/Trusted.ogg</string>
     <string name="def_wireless_charging_started_sound" translatable="false">/system/media/audio/ui/WirelessChargingStarted.ogg</string>
 
-    <bool name="def_lockscreen_disabled">false</bool>
-    <bool name="def_device_provisioned">false</bool>
+    <bool name="def_lockscreen_disabled">true</bool>
+    <bool name="def_device_provisioned">true</bool>
     <integer name="def_dock_audio_media_enabled">1</integer>
 
     <!-- Notifications use ringer volume -->
